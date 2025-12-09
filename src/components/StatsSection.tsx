@@ -5,7 +5,7 @@ const stats = [
   { icon: BarChart3, value: 50, suffix: "+", label: "Projects Completed" },
   { icon: Database, value: 10, suffix: "M+", label: "Data Points Analyzed" },
   { icon: Users, value: 25, suffix: "+", label: "Happy Clients" },
-  { icon: Award, value: 5, suffix: "+", label: "Years Experience" },
+  { icon: Award, value: 2, suffix: "+", label: "Years Experience" },
 ];
 
 const useCountUp = (end: number, duration: number = 2000, start: boolean = false) => {
