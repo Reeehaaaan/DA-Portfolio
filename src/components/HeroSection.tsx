@@ -21,7 +21,7 @@ export const HeroSection = () => {
           {/* Main Heading */}
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 animate-fade-up" style={{ animationDelay: "0.1s" }}>
             Hi, I'm{" "}
-            <span className="text-gradient">Your Name</span>
+            <span className="text-gradient">Rehan</span>
           </h1>
 
           {/* Subtitle */}
@@ -44,7 +44,7 @@ export const HeroSection = () => {
               </a>
             </Button>
             <Button asChild variant="outline" size="lg" className="gap-2 hover-glow">
-              <a href="/resume.pdf" download>
+              <a href="/Rehan_resume.pdf" download>
                 <Download className="h-4 w-4" />
                 Download Resume
               </a>

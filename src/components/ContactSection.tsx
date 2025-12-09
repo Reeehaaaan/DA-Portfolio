@@ -2,9 +2,9 @@ import { Mail, Linkedin, Github, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const socialLinks = [
-  { icon: Mail, label: "Email", href: "mailto:your.email@example.com", username: "your.email@example.com" },
-  { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com/in/yourprofile", username: "/in/yourprofile" },
-  { icon: Github, label: "GitHub", href: "https://github.com/yourusername", username: "@yourusername" },
+  { icon: Mail, label: "Email", href: "mailto:rehanahmed07777@gmail.com", username: "rehanahmed07777@gmail.com" },
+  { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/rehan-ahmed-rikati-841382202/", username: "Rehan Ahmed Rikati" },
+  { icon: Github, label: "GitHub", href: "https://github.com/Reeehaaaan", username: "@Reeehaaaan" },
 ];
 
 export const ContactSection = () => {
@@ -36,7 +36,7 @@ export const ContactSection = () => {
                 predictive models, I'm here to help turn your data into insights.
               </p>
               <Button asChild size="lg" className="gap-2 group">
-                <a href="mailto:your.email@example.com">
+                <a href="mailto:rehanahmed07777@gmail.com">
                   Send me an email
                   <ArrowUpRight className="h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                 </a>

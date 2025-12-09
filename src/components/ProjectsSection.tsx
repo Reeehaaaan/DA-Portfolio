@@ -4,40 +4,40 @@ import { Badge } from "@/components/ui/badge";
 
 const projects = [
   {
-    title: "Sales Performance Dashboard",
-    description: "Interactive dashboard analyzing sales trends, customer segmentation, and revenue forecasting for a retail company.",
+    title: "Automotive Warranty Analysis",
+    description: "Built an end-to-end data analytics pipeline using Python, SQL, and Power BI to extract insights from 190K+ automotive records.",
     image: null,
     icon: BarChart3,
-    tools: ["Python", "Tableau", "SQL", "Pandas"],
-    liveUrl: "#",
-    githubUrl: "#",
+    tools: ["Python", "SQL", "Power BI", "Excel", "Power Point"],
+    liveUrl: "https://github.com/Reeehaaaan/automotive_warranty_analysis",
+    githubUrl: "https://github.com/Reeehaaaan/automotive_warranty_analysis",
   },
   {
-    title: "Customer Churn Prediction",
-    description: "Machine learning model to predict customer churn with 92% accuracy, enabling proactive retention strategies.",
+    title: "Healthcare SQL Analytics",
+    description: "Data-driven analysis of synthetic healthcare records using SQL to uncover patient, treatment, and operational insights.",
     image: null,
     icon: TrendingUp,
-    tools: ["Python", "Scikit-learn", "Power BI", "PostgreSQL"],
-    liveUrl: "#",
-    githubUrl: "#",
-  },
-  {
-    title: "Market Basket Analysis",
-    description: "Association rule mining to uncover purchasing patterns and optimize product placement strategies.",
-    image: null,
-    icon: PieChart,
-    tools: ["R", "SQL", "Tableau", "Excel"],
-    liveUrl: "#",
-    githubUrl: "#",
+    tools: ["Python", "SQL", "Scikit-learn", "Matplotlib", "Seaborn", "Excel"],
+    liveUrl: "https://github.com/Reeehaaaan/healthcare-sql-analytics",
+    githubUrl: "",
   },
   {
     title: "Financial Risk Analytics",
-    description: "Comprehensive risk assessment model analyzing market volatility and portfolio optimization.",
+    description: "End-to-end SQL analysis of financial transactions to identify trends, anomalies, and performance patterns.",
+    image: null,
+    icon: PieChart,
+    tools: ["Python", "SQL", "Matplotlib", "Seaborn", "Excel"],
+    liveUrl: "https://github.com/Reeehaaaan/finance-data-analystics",
+    githubUrl: "https://github.com/Reeehaaaan/finance-data-analystics",
+  },
+  {
+    title: "Interactive Tableau Dashboard",
+    description: "A collection of interactive Tableau visualizations showcasing insights across healthcare, finance, and operational datasets.",
     image: null,
     icon: LineChart,
-    tools: ["Python", "TensorFlow", "Plotly", "MongoDB"],
-    liveUrl: "#",
-    githubUrl: "#",
+    tools: ["Tableau", "Excel"],
+    liveUrl: "https://public.tableau.com/app/profile/rehan.r2114/vizzes",
+    githubUrl: "https://public.tableau.com/app/profile/rehan.r2114/vizzes",
   },
 ];
 
@@ -118,7 +118,7 @@ export const ProjectsSection = () => {
           {/* View All Projects Button */}
           <div className="text-center mt-12">
             <Button asChild variant="outline" size="lg" className="gap-2">
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/Reeehaaaan?tab=repositories" target="_blank" rel="noopener noreferrer">
                 View All Projects
                 <ExternalLink className="h-4 w-4" />
               </a>

@@ -31,7 +31,7 @@ export const AboutSection = () => {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Location</p>
-                    <p className="font-medium">Your City, Country</p>
+                    <p className="font-medium">Bengaluru, India</p>
                   </div>
                 </div>
                 <div className="glass-card rounded-xl p-4 flex items-center gap-4">
@@ -40,7 +40,7 @@ export const AboutSection = () => {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Experience</p>
-                    <p className="font-medium">Senior Data Analyst</p>
+                    <p className="font-medium">Data Analyst</p>
                   </div>
                 </div>
               </div>
