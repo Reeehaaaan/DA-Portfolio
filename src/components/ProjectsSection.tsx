@@ -114,6 +114,16 @@ export const ProjectsSection = () => {
               <ProjectCard key={index} project={project} />
             ))}
           </div>
+
+          {/* View All Projects Button */}
+          <div className="text-center mt-12">
+            <Button asChild variant="outline" size="lg" className="gap-2">
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                View All Projects
+                <ExternalLink className="h-4 w-4" />
+              </a>
+            </Button>
+          </div>
         </div>
       </div>
     </section>
