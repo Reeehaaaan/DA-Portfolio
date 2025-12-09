@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { ThemeToggle } from "./ThemeToggle";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
@@ -44,7 +43,6 @@ export const Navigation = () => {
               {link.label}
             </a>
           ))}
-          <ThemeToggle />
           <Button asChild className="bg-primary hover:bg-primary/90">
             <a href="#contact">Get in Touch</a>
           </Button>
@@ -52,7 +50,6 @@ export const Navigation = () => {
 
         {/* Mobile Menu Button */}
         <div className="flex md:hidden items-center gap-4">
-          <ThemeToggle />
           <Button
             variant="ghost"
             size="icon"
