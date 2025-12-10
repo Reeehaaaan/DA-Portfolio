@@ -43,20 +43,20 @@ export const HeroSection = () => {
                 <ChevronRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>
-            <Button asChild variant="outline" size="lg" className="flex-col gap-1 hover-glow py-3">
+            <Button asChild variant="outline" size="lg" className="gap-2 hover-glow">
               <a href="/Rehan_resume.pdf" download>
-                Download Resume
                 <Download className="h-4 w-4" />
+                Download Resume
               </a>
             </Button>
           </div>
-        </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-          <a href="#about" className="text-muted-foreground hover:text-foreground transition-colors">
-            <ArrowDown className="h-6 w-6" />
-          </a>
+          {/* Scroll Indicator - Below buttons, centered */}
+          <div className="mt-12 animate-bounce">
+            <a href="#about" className="text-muted-foreground hover:text-foreground transition-colors">
+              <ArrowDown className="h-6 w-6 mx-auto" />
+            </a>
+          </div>
         </div>
       </div>
     </section>
