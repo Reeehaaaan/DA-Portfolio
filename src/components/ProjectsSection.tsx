@@ -1,4 +1,4 @@
-import { ExternalLink, Github } from "lucide-react";
+import { Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
@@ -13,32 +13,28 @@ const projects = [
     description: "Built an end-to-end data analytics pipeline using Python, SQL, and Power BI to extract insights from 190K+ automotive records.",
     image: automotiveImg,
     tools: ["Python", "SQL", "Power BI", "Excel", "Power Point"],
-    liveUrl: "https://github.com/Reeehaaaan/automotive_warranty_analysis",
-    githubUrl: "https://github.com/Reeehaaaan/automotive_warranty_analysis",
+    url: "https://github.com/Reeehaaaan/automotive_warranty_analysis",
   },
   {
     title: "Healthcare SQL Analytics",
     description: "Data-driven analysis of synthetic healthcare records using SQL to uncover patient, treatment, and operational insights.",
     image: healthcareImg,
     tools: ["Python", "SQL", "Scikit-learn", "Matplotlib", "Seaborn", "Excel"],
-    liveUrl: "https://github.com/Reeehaaaan/healthcare-sql-analytics",
-    githubUrl: "",
+    url: "https://github.com/Reeehaaaan/healthcare-sql-analytics",
   },
   {
     title: "Financial Risk Analytics",
     description: "End-to-end SQL analysis of financial transactions to identify trends, anomalies, and performance patterns.",
     image: financeImg,
     tools: ["Python", "SQL", "Matplotlib", "Seaborn", "Excel"],
-    liveUrl: "https://github.com/Reeehaaaan/finance-data-analystics",
-    githubUrl: "https://github.com/Reeehaaaan/finance-data-analystics",
+    url: "https://github.com/Reeehaaaan/finance-data-analystics",
   },
   {
     title: "Interactive Tableau Dashboard",
     description: "A collection of interactive Tableau visualizations showcasing insights across healthcare, finance, and operational datasets.",
     image: tableauImg,
     tools: ["Tableau", "Excel"],
-    liveUrl: "https://public.tableau.com/app/profile/rehan.r2114/vizzes",
-    githubUrl: "https://public.tableau.com/app/profile/rehan.r2114/vizzes",
+    url: "https://public.tableau.com/app/profile/rehan.r2114/vizzes",
   },
 ];
 
@@ -73,20 +69,13 @@ const ProjectCard = ({ project }: { project: typeof projects[0] }) => {
           ))}
         </div>
 
-        {/* Links */}
-        <div className="flex gap-3">
-          <Button asChild size="sm" className="flex-1 gap-2">
-            <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-              <ExternalLink className="h-4 w-4" />
-              View Project
-            </a>
-          </Button>
-          <Button asChild variant="outline" size="sm" className="gap-2">
-            <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-              <Github className="h-4 w-4" />
-            </a>
-          </Button>
-        </div>
+        {/* Link */}
+        <Button asChild size="sm" className="w-full gap-2">
+          <a href={project.url} target="_blank" rel="noopener noreferrer">
+            <Github className="h-4 w-4" />
+            View Project
+          </a>
+        </Button>
       </div>
     </div>
   );
@@ -123,7 +112,7 @@ export const ProjectsSection = () => {
             <Button asChild variant="outline" size="lg" className="gap-2">
               <a href="https://github.com/Reeehaaaan?tab=repositories" target="_blank" rel="noopener noreferrer">
                 View All Projects
-                <ExternalLink className="h-4 w-4" />
+                <Github className="h-4 w-4" />
               </a>
             </Button>
           </div>
