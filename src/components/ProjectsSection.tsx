@@ -19,7 +19,7 @@ const projects = [
     title: "Healthcare SQL Analytics",
     description: "Data-driven analysis of synthetic healthcare records using SQL to uncover patient, treatment, and operational insights.",
     image: healthcareImg,
-    tools: ["Python", "SQL", "Scikit-learn", "Matplotlib", "Seaborn", "Excel"],
+    tools: ["Python", "SQL", "Matplotlib", "Seaborn", "Excel"],
     url: "https://github.com/Reeehaaaan/healthcare-sql-analytics",
   },
   {
