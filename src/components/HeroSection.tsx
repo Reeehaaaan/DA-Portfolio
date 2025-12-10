@@ -43,10 +43,10 @@ export const HeroSection = () => {
                 <ChevronRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>
-            <Button asChild variant="outline" size="lg" className="gap-2 hover-glow">
+            <Button asChild variant="outline" size="lg" className="flex-col gap-1 hover-glow py-3">
               <a href="/Rehan_resume.pdf" download>
-                <Download className="h-4 w-4" />
                 Download Resume
+                <Download className="h-4 w-4" />
               </a>
             </Button>
           </div>

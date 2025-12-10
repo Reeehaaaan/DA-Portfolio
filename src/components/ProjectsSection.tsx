@@ -1,13 +1,17 @@
-import { ExternalLink, Github, BarChart3, TrendingUp, PieChart, LineChart } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+
+import automotiveImg from "@/assets/project-automotive.jpg";
+import healthcareImg from "@/assets/project-healthcare.jpg";
+import financeImg from "@/assets/project-finance.jpg";
+import tableauImg from "@/assets/project-tableau.jpg";
 
 const projects = [
   {
     title: "Automotive Warranty Analysis",
     description: "Built an end-to-end data analytics pipeline using Python, SQL, and Power BI to extract insights from 190K+ automotive records.",
-    image: null,
-    icon: BarChart3,
+    image: automotiveImg,
     tools: ["Python", "SQL", "Power BI", "Excel", "Power Point"],
     liveUrl: "https://github.com/Reeehaaaan/automotive_warranty_analysis",
     githubUrl: "https://github.com/Reeehaaaan/automotive_warranty_analysis",
@@ -15,8 +19,7 @@ const projects = [
   {
     title: "Healthcare SQL Analytics",
     description: "Data-driven analysis of synthetic healthcare records using SQL to uncover patient, treatment, and operational insights.",
-    image: null,
-    icon: TrendingUp,
+    image: healthcareImg,
     tools: ["Python", "SQL", "Scikit-learn", "Matplotlib", "Seaborn", "Excel"],
     liveUrl: "https://github.com/Reeehaaaan/healthcare-sql-analytics",
     githubUrl: "",
@@ -24,8 +27,7 @@ const projects = [
   {
     title: "Financial Risk Analytics",
     description: "End-to-end SQL analysis of financial transactions to identify trends, anomalies, and performance patterns.",
-    image: null,
-    icon: PieChart,
+    image: financeImg,
     tools: ["Python", "SQL", "Matplotlib", "Seaborn", "Excel"],
     liveUrl: "https://github.com/Reeehaaaan/finance-data-analystics",
     githubUrl: "https://github.com/Reeehaaaan/finance-data-analystics",
@@ -33,8 +35,7 @@ const projects = [
   {
     title: "Interactive Tableau Dashboard",
     description: "A collection of interactive Tableau visualizations showcasing insights across healthcare, finance, and operational datasets.",
-    image: null,
-    icon: LineChart,
+    image: tableauImg,
     tools: ["Tableau", "Excel"],
     liveUrl: "https://public.tableau.com/app/profile/rehan.r2114/vizzes",
     githubUrl: "https://public.tableau.com/app/profile/rehan.r2114/vizzes",
@@ -42,14 +43,16 @@ const projects = [
 ];
 
 const ProjectCard = ({ project }: { project: typeof projects[0] }) => {
-  const Icon = project.icon;
-
   return (
     <div className="glass-card rounded-2xl overflow-hidden group hover-glow transition-all duration-300 hover:-translate-y-2">
-      {/* Project Image/Icon */}
-      <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center relative overflow-hidden">
-        <Icon className="h-20 w-20 text-primary/30 group-hover:scale-110 transition-transform duration-300" />
-        <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent" />
+      {/* Project Image */}
+      <div className="aspect-video relative overflow-hidden">
+        <img 
+          src={project.image} 
+          alt={project.title}
+          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
       </div>
 
       {/* Content */}
