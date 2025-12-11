@@ -3,11 +3,18 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
-  { label: "Projects", href: "#projects" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", sectionId: "about" },
+  { label: "Skills", sectionId: "skills" },
+  { label: "Projects", sectionId: "projects" },
+  { label: "Contact", sectionId: "contact" },
 ];
+
+const scrollToSection = (sectionId: string) => {
+  const element = document.getElementById(sectionId);
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth" });
+  }
+};
 
 export const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -35,16 +42,16 @@ export const Navigation = () => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-muted-foreground hover:text-foreground transition-colors duration-200 text-sm font-medium"
+            <button
+              key={link.sectionId}
+              onClick={() => scrollToSection(link.sectionId)}
+              className="text-muted-foreground hover:text-foreground transition-colors duration-200 text-sm font-medium bg-transparent border-none cursor-pointer"
             >
               {link.label}
-            </a>
+            </button>
           ))}
-          <Button asChild className="bg-primary hover:bg-primary/90">
-            <a href="#contact">Get in Touch</a>
+          <Button onClick={() => scrollToSection("contact")} className="bg-primary hover:bg-primary/90">
+            Get in Touch
           </Button>
         </div>
 
@@ -65,19 +72,25 @@ export const Navigation = () => {
         <div className="md:hidden glass-card mt-2 mx-6 rounded-xl p-6 animate-fade-in">
           <div className="flex flex-col gap-4">
             {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200 text-lg font-medium"
+              <button
+                key={link.sectionId}
+                onClick={() => {
+                  scrollToSection(link.sectionId);
+                  setIsMobileMenuOpen(false);
+                }}
+                className="text-muted-foreground hover:text-foreground transition-colors duration-200 text-lg font-medium bg-transparent border-none cursor-pointer text-left"
               >
                 {link.label}
-              </a>
+              </button>
             ))}
-            <Button asChild className="bg-primary hover:bg-primary/90 mt-2">
-              <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>
-                Get in Touch
-              </a>
+            <Button 
+              onClick={() => {
+                scrollToSection("contact");
+                setIsMobileMenuOpen(false);
+              }} 
+              className="bg-primary hover:bg-primary/90 mt-2"
+            >
+              Get in Touch
             </Button>
           </div>
         </div>

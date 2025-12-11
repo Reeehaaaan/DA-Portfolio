@@ -1,6 +1,13 @@
 import { ArrowDown, Download, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+const scrollToSection = (sectionId: string) => {
+  const element = document.getElementById(sectionId);
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth" });
+  }
+};
+
 export const HeroSection = () => {
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
@@ -37,14 +44,16 @@ export const HeroSection = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up" style={{ animationDelay: "0.4s" }}>
-            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 gap-2 group">
-              <a href="#projects">
-                View My Work
-                <ChevronRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </a>
+            <Button 
+              size="lg" 
+              className="bg-primary hover:bg-primary/90 gap-2 group"
+              onClick={() => scrollToSection("projects")}
+            >
+              View My Work
+              <ChevronRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button asChild variant="outline" size="lg" className="gap-2 hover-glow">
-              <a href="/Rehan_resume.pdf" download>
+              <a href="/DA-Portfolio/Rehan_resume.pdf" download>
                 <Download className="h-4 w-4" />
                 Download Resume
               </a>
@@ -53,9 +62,12 @@ export const HeroSection = () => {
 
           {/* Scroll Indicator - Below buttons, centered */}
           <div className="mt-12 animate-bounce">
-            <a href="#about" className="text-muted-foreground hover:text-foreground transition-colors">
+            <button 
+              onClick={() => scrollToSection("about")} 
+              className="text-muted-foreground hover:text-foreground transition-colors bg-transparent border-none cursor-pointer"
+            >
               <ArrowDown className="h-6 w-6 mx-auto" />
-            </a>
+            </button>
           </div>
         </div>
       </div>
